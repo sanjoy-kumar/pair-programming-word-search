@@ -35,4 +35,27 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("should return true if the word is present", function() {
+    const result = wordSearch([
+      ['A', 'L', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'I', 'I', 'N', 'F', 'E', 'L', 'D'],
+      ['Y', 'G', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'H', 'J', 'T', 'E', 'V', 'R', 'G'],
+      ['W', 'T', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'H', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'O', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['O', 'U', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'S', 'K', 'F', 'Q', 'U', 'A', 'L'],
+      ['E', 'E', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'LIGHTHOUSE')
+
+    assert.isTrue(result);
+  });
+
+  it("should return true if the array is empty", function() {
+    const result = wordSearch([], 'LIGHTHOUSE')
+
+    assert.isFalse(result);
+  });
 });
